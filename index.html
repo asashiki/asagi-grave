@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="浅仪式之墓" />
+  <title>浅仪式之墓</title>
+  <link rel="stylesheet" href="site.css" />
+</head>
+<body class="is-title is-app">
+  <div id="scene">
+    <div id="bg" aria-hidden="true"></div>
+    <canvas id="rain" aria-hidden="true"></canvas>
+    <div id="vignette" aria-hidden="true"></div>
+
+    <!-- 标题六键：按钮，不整页跳转 -->
+    <nav id="menu" aria-label="标题菜单">
+      <button type="button" class="menu-btn pos-tl" data-go="game" title="开始">
+        <img src="ui/start.png" alt="ゲームを始める" draggable="false" />
+      </button>
+      <button type="button" class="menu-btn pos-tr dim" data-go="recall" title="残响">
+        <img src="ui/recall.png" alt="回想モード" draggable="false" />
+      </button>
+      <button type="button" class="menu-btn pos-ml" data-go="diary" title="手记">
+        <img src="ui/diary.png" alt="日記を読む" draggable="false" />
+      </button>
+      <button type="button" class="menu-btn pos-mr dim" data-go="music" title="音">
+        <img src="ui/music.png" alt="音楽モード" draggable="false" />
+      </button>
+      <button type="button" class="menu-btn pos-bl" id="btn-quit" title="结束">
+        <img src="ui/end.png" alt="ゲームを終わる" draggable="false" />
+      </button>
+      <button type="button" class="menu-btn pos-br" id="btn-reset" title="初始化">
+        <img src="ui/reset.png" alt="データの初期化" draggable="false" />
+      </button>
+    </nav>
+
+    <!-- 子界面：盖在同一场景上，不刷新页面 -->
+    <div id="view" class="view" hidden></div>
+  </div>
+
+  <div id="dialog" class="dialog" hidden>
+    <div class="dialog-panel">
+      <p id="dialog-msg"></p>
+      <div class="dialog-row">
+        <button type="button" class="dialog-btn" id="dialog-yes">
+          <img src="ui/yes.png" alt="はい" draggable="false" />
+        </button>
+        <button type="button" class="dialog-btn" id="dialog-no">
+          <img src="ui/no.png" alt="いいえ" draggable="false" />
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="rain.js"></script>
+  <script src="shared.js"></script>
+  <script src="content.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

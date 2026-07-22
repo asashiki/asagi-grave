@@ -1,4 +1,5 @@
 # 浅仪式之墓
+<img width="2561" height="1440" alt="图片信息" src="https://github.com/user-attachments/assets/677d695a-62d3-4e53-98ec-b95e0f5d107e" />
 
 一座给 **vibe coding / 被 AI 味耗干的人** 立的网页墓。
 
